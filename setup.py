@@ -21,7 +21,8 @@ long_description = \
 setup(
     name='niteoweb.puzzle',
     version=version,
-    description="Enter description of what this project is all about.",
+    description="A mostly theming oriented package to convert a default \
+        Plone 4 into our corporate website with a few pages and a blog.",
     long_description=long_description,
     # Get more from http://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
@@ -32,7 +33,7 @@ setup(
     author='NiteoWeb Ltd.',
     author_email='info@niteoweb.com',
     url='http://www.niteoweb.com',
-    license='BSD',
+    license='Restricted',
     packages=find_packages('src', exclude=['ez_setup']),
     namespace_packages=['niteoweb'],
     package_dir={'': 'src'},
