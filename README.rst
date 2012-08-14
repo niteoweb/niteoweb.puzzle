@@ -13,6 +13,7 @@ NiteoWeb.com corporate website
 
 .. topic:: Summary
 
-    TODO
+    A mostly theming oriented package to convert a default Plone 4 into our
+    corporate website with a few pages and a blog.
 
-TODO
+
