@@ -3,5 +3,5 @@ Definitions of basic terms
 
 .. glossary::
 
-    First Item
+    TODO: First Item
         Explain first item and add more.
