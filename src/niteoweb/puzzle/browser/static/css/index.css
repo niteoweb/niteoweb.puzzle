@@ -1,0 +1,569 @@
+/* ----------- CSS reset ----------- */
+/* v1.0 | 20080212 | http://meyerweb.com/eric/tools/css/reset/*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* ----------- Global styles ----------- */
+body {
+    font-family: verdana,sans-serif;
+    font-size: 12px;
+}
+h1, h2, h3, h4, h5 {
+    color: #EF8200;
+}
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+h3 {
+    margin-bottom: 10px;
+}
+p {
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+b {
+    color: #123D79;
+}
+a {
+    color: #EF8200;
+    text-decoration:none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:visited {
+    color: #AF8200
+}
+
+
+/* ----------- Positioning ----------- */
+
+body {
+    margin: 0;
+}
+
+/* this centers top, header and content sections */
+#main-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+#top {
+    height: 96px;
+}
+
+#header-index {
+    height: 211px;
+}
+
+#header-subpage {
+    height: 97px;
+}
+
+#breadcrumbs {
+    margin-top: 0.2em;
+}
+
+#content {
+    margin-top: 10px;
+}
+
+/* this allows to have a full-width blue stripe in the background and also footer content centered and fixed width */
+#footer-full-width {
+    float: left;
+    width: 100%;
+    margin-top: 20px
+}
+
+#footer-fixed-width {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+#footer {
+    margin-top: 10px;
+    min-height: 150px;
+}
+
+/* ----------- Top styling ----------- */
+#skype img {
+    float: right;
+}
+
+/* ----------- Header styling ----------- */
+
+body {
+    background: #FFFFFF url(../images/bg_body_subpage.jpg) repeat-x 0 0;
+}
+
+body.section-front-page {
+    background: #FFFFFF url(../images/bg_body_index.jpg) repeat-x 0 0;
+}
+
+.header {
+    color: white;
+    font-family: Myriad Pro,tahoma,sans-serif;
+}
+
+.header h1 {
+    font-weight: normal;
+    color: white;
+}
+
+#header-index {
+    background: #123D79 url(../images/bg_header_index.jpg) repeat-x 0 0;
+    text-align: right;
+}
+
+#header-index h1 {
+    margin-top: 30px;
+    font-size: 50px;
+}
+
+#header-index p {
+    font-size: 18px;
+}
+
+#header-index .documentDescription {
+    font-size: 16px;
+    padding-top: 6px;
+}
+
+#header-subpage {
+    background: #123D79 url(../images/bg_header_subpage.jpg) no-repeat scroll top right;
+}
+
+#header-subpage h1 {
+    margin-top: 50px;
+    font-size: 36px;
+}
+
+#header-subpage p {
+    font-size: 18px;
+}
+
+#breadcrumbs {
+    color: #666666;
+    font-size: 90%;
+}
+/* ----------- Content styling ----------- */
+/* we use xdv rules to copy h1 to header so we need to hide it in the main content area  */
+#content .documentFirstHeading {
+    display: none;
+}
+#content .documentDescription {
+    display: none;
+}
+
+#content div.documentByLine {
+    color:#666666;
+    display:block;
+    font-size:90%;
+    margin-bottom: 8px;
+}
+
+#content p {
+    margin-bottom: 0.5em;
+}
+
+#content h3 {
+    margin-top:10px;
+    margin-bottom:6px;
+}
+#content pre {
+    background-color: #222222;
+    color: White;
+    font-family: Consolas,Inconsolata,"DejaVu Sans Mono","Bitstream Vera Sans Mono","Courier New",monospace;
+    line-height: 1em;
+    margin-bottom: 1em;
+    padding: 10px;
+    overflow: scroll;
+}
+
+#content ul {
+    list-style-type: disc;
+    margin-left: 2em;
+    margin-bottom: 1.5em;
+}
+
+#content li {
+    display: list-item;
+    line-height: 1.5em;
+    margin-bottom: 0.25em;
+}
+
+#content table {
+    border-collapse:collapse;
+    border-spacing:0;
+    text-align:left;
+    margin-bottom: 1em;
+}
+
+table.listing tbody tr {
+    text-align:left;
+}
+
+table.listing tbody th {
+    font-weight:bold;
+}
+
+table.grid td, table.grid th {
+    border:1px solid #E7E7E7;
+    padding:0.5em;
+}
+
+table.listing th {
+    border-color:#E7E7E7;
+    border-style:solid none none;
+    border-width:0.1em;
+    color:#666666;
+    text-align:left;
+}
+
+table.listing tbody tr td {
+    background:none repeat scroll 0 0 transparent;
+}
+
+table.grid td, table.grid th {
+    border:1px solid #E7E7E7;
+    padding:0.5em;
+}
+
+.contenttype-blog-entry {
+    margin-bottom: 3em;
+}
+
+.image-left {
+    float: left;
+    margin-right: 1em;
+}
+
+.image-right {
+    float: right;
+    margin-left: 1em;
+}
+
+.callout {
+    border: 0.1em #666666;
+    border-style: solid none;
+    clear: both;
+    color: #666666;
+    padding: 1em;
+}
+
+
+/* ----------- Comments styling ----------- */
+#disqus_thread {
+    margin-top: 3em;
+}
+
+#disqus_thread h3{
+   border-bottom: 1px solid #EF8200;
+}
+
+/* ----------- Footer styling ----------- */
+#footer-full-width {
+    background: #133E7A url(../images/bg_footer.jpg) repeat-x 0 0;
+}
+
+#footer {
+    line-height:1.5em;
+    color: white;
+}
+
+
+.CON_container_classic {
+    margin: auto;
+}
+
+/* ----------- First-page QuickInfo box styling ----------- */
+#tabs {
+  width: 786px;
+  margin: auto;
+}
+
+#tabs h3 {
+    font-size: 16px;
+    padding: 20px 0 0 10px;
+    margin-bottom: 0px;
+}
+
+#tabs ul {
+    height: 77px;
+    width: 786px;
+}
+
+#tabs li {
+    float: left;
+}
+
+#tabs li p {
+    color: black;
+    padding-left: 10px;
+}
+
+#tabs li a{
+    color: black;
+    text-decoration: none;
+}
+
+#tabs li a:visited{
+    color: black;
+}
+
+#tab_1_li, #tab_2_li, #tab_3_li {
+    height: 77px;
+    width: 262px;
+}
+
+#tab_1_li{
+    background: url(../images/left_tab.png) no-repeat;
+}
+
+#tab_2_li{
+    background: url(../images/middle_tab.png) no-repeat;
+}
+
+#tab_3_li{
+    background: url(../images/right_tab.png) no-repeat;
+}
+
+.tab_selected {
+    background: url(../images/tab_active.png) no-repeat !important;
+}
+
+/* end tabs styling, begin quickinfo contents styling*/
+
+#contents {
+    height: 209px;
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+    border-bottom: solid 1px black;
+    width: 784px;
+    margin: auto;
+    overflow-x:hidden;
+}
+
+.keyword-info {
+    margin-top: 2px;
+}
+
+#contents-border{
+    height: 208px;
+    width: 782px;
+    border-left: solid 1px #257aef;
+    border-right: solid 1px #257aef;
+    border-bottom: solid 1px #257aef;
+    background: url(../images/tab_bg.png) repeat-x;
+}
+
+.content-wrapper {
+   padding: 3px 2px 2px 2px;
+   float: left;
+}
+
+.content-wrapper p {
+    margin: 10px 10px 10px 10px;
+}
+
+.content-wrapper img {
+    float: right;
+    margin: 0 2em;
+    width: 200px;
+    height: 200px;
+}
+
+#content_3 img {
+    float: left;
+}
+
+#content_3 p {
+    margin-top: 2em;
+    margin-right: 6em;
+}
+
+
+/* COLLAPSIBLE SECTIONS */
+dl.collapsible {
+border:0.1em solid #8CACBB;
+margin:1em 0;
+padding:0;
+}
+dl.collapsible dt.collapsibleHeader {
+background:none repeat scroll 0 0 Transparent;
+display:block;
+float:left;
+font-size:120%;
+line-height:1.2em;
+margin:0 0 -0.6em 1em;
+padding:0 0.5em;
+position:relative;
+top:-0.6em;
+vertical-align:middle;
+width:auto;
+}
+dl.collapsible dd.collapsibleContent {
+clear:left;
+margin:0;
+padding:0 1em 0.4em;
+}
+dl.collapsible dd.collapsibleContent > dl {
+margin:0;
+padding:0;
+}
+dl.expandedInlineCollapsible dt.collapsibleHeader, dl.expandedBlockCollapsible dt.collapsibleHeader {
+background:url("../images/treeExpanded.png") no-repeat scroll 0.5em 50% White;
+cursor:pointer;
+padding:0 0.5em 0 2em;
+}
+dl.collapsedBlockCollapsible {
+border:medium none;
+height:1em;
+width:auto;
+}
+dl.collapsedBlockCollapsible dt.collapsibleHeader {
+background:url("../images/treeCollapsed.png") no-repeat scroll 0.5em 50% Transparent;
+cursor:pointer;
+float:none;
+line-height:1.2em;
+margin:0 0 0 1em;
+padding:0 0.5em 0 2em;
+position:relative;
+}
+dl.collapsedInlineCollapsible dd.collapsibleContent, dl.collapsedBlockCollapsible dd.collapsibleContent {
+display:none;
+}
+dl.collapsedInlineCollapsible {
+border:medium none;
+display:inline;
+height:1em;
+width:auto;
+}
+dl.collapsedInlineCollapsible dt.collapsibleHeader {
+cursor:pointer;
+display:inline;
+float:none;
+line-height:1em;
+margin:0;
+padding:0 0 0 2em;
+position:static;
+}
+
+/* portlets styling */
+
+dl.portlet {
+    margin: 0 0 1em;
+}
+dl.portletError {
+    background-color: #FFA500;
+}
+
+dl.portlet dt,
+div.portletAssignments div.portletHeader {
+    padding: 0.42em 1em;
+    background: #ddd;
+    line-height: normal;
+}
+dl.portlet dt.hiddenStructure {
+    padding: 0;
+}
+
+dl.portlet dt a:link,
+dl.portlet dt a:visited,
+dl.portlet dt a:hover {
+    color: black;
+    display: block;
+    border: none;
+}
+
+dl.portlet dd.portletItem,
+dl.portlet dd.portletFooter,
+dl.portletError dd {
+    padding: 1em;
+}
+
+#portlet-prefs a {
+    border: none;
+    line-height: 2em;
+}
+
+.portletItemDetails {
+    display:block;
+    font-size:85%;
+    line-height:1.5em;
+    margin-left:1em;
+    padding-top:0.5em;
+}
+
+.portletTwitterPortlet dd {
+    line-height: 1.3em;
+}
+
+
+/* tag-cloud styles*/
+.cloud1 {
+font-size:1em;
+}
+.cloud2 {
+font-size:1.3em;
+}
+.cloud3 {
+font-size:1.6em;
+}
+.cloud4 {
+font-size:1.9em;
+}
+.cloud5 {
+font-size:2.2em;
+}
