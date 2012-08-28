@@ -7,4 +7,58 @@
     <!-- Rules applying to standard Plone pages -->
     <theme href="index.html" />
 
+    <!-- Remove skype call div -->
+    <drop css:theme="#skype" />
+
+    <!-- Temporarily - this must be in content -->
+    <replace css:theme="h1#page-title">
+        <h1 id="page-title">
+            Web presence,<br/> made easy.
+        </h1>
+    </replace>
+    <replace css:theme="p#slogan">
+        <p id="slogan">
+            We put the pieces together.
+        </p>
+    </replace>
+
+    <!-- copy over two columns -->
+    <copy css:content="div#about-us" css:theme="div#left-column"/>
+    <copy css:content="div#services" css:theme="div#right-column"/>
+
+    <!-- XPath to the "What do we do?"  -->
+    <drop content="//*[@id='services']/h2[2]"/>
+
+    <!-- XPath to the empty paragraph  -->
+    <drop content="//*[@id='services']/p[5]"/>
+
+    
+    <replace theme-children="//*[@id='tab_1_a']" content-children="//*[@id='quickinfo']/div[1]/h3"/>
+    <replace theme-children="//*[@id='tab_1_li']/p" content-children="//*[@id='quickinfo']/div[1]/p[1]"/>
+    <replace theme-children="//*[@id='content_1']/p[1]" content-children="//*[@id='quickinfo']/div[1]/p[2]"/>
+    <replace theme-children="//*[@id='content_1']/p[2]" content-children="//*[@id='quickinfo']/div[1]/p[3]"/>
+    <replace theme-children="//*[@id='content_1']/p[3]" content-children="//*[@id='quickinfo']/div[1]/p[4]"/>
+
+    <replace theme-children="//*[@id='tab_2_a']" content-children="//*[@id='quickinfo']/div[2]/h3"/>
+    <replace theme-children="//*[@id='tab_2_li']/p" content-children="//*[@id='quickinfo']/div[2]/p[1]"/>
+    <replace theme-children="//*[@id='content_2']/p[1]" content-children="//*[@id='quickinfo']/div[2]/p[2]"/>
+    <replace theme-children="//*[@id='content_2']/p[2]" content-children="//*[@id='quickinfo']/div[2]/p[3]"/>
+    <drop theme="//*[@id='content_2']/p[3]"/>
+
+    <replace theme-children="//*[@id='tab_3_a']" content-children="//*[@id='quickinfo']/div[3]/h3"/>
+    <replace theme-children="//*[@id='tab_3_li']/p" content-children="//*[@id='quickinfo']/div[3]/p[1]"/>
+    <replace theme-children="//*[@id='content_3']/p[1]" content-children="//*[@id='quickinfo']/div[3]/p[2]"/>
+    <replace theme-children="//*[@id='content_3']/p[2]" content-children="//*[@id='quickinfo']/div[3]/p[3]"/>
+    <drop theme="//*[@id='content_3']/p[3]"/>
+
+    <!--
+    <replace theme-children="//*[@id='footer']/div[1]" content-children="//*[@id='footer-wrapper']/div[1]"/>
+    <replace theme-children="//*[@id='footer']/div[2]" content-children="//*[@id='footer-wrapper']/div[2]"/>
+    <replace theme-children="//*[@id='footer']/div[3]" content-children="//*[@id='footer-wrapper']/div[3]"/>
+    <replace theme-children="//*[@id='footer']/div[4]" content-children="//*[@id='footer-wrapper']/div[4]"/>
+    -->
+    <replace css:theme-children="#FooterPortletA" content-children="//*[@id='footer-wrapper']/div[1]"/>
+    <replace css:theme-children="#FooterPortletB" content-children="//*[@id='footer-wrapper']/div[2]"/>
+    <replace css:theme-children="#FooterPortletC" content-children="//*[@id='footer-wrapper']/div[3]"/>
+    <replace css:theme-children="#FooterPortletD" content-children="//*[@id='footer-wrapper']/div[4]"/>
 </rules>
