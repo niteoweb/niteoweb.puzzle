@@ -72,7 +72,7 @@ p {
     line-height: 1.5em;
     margin-bottom: 1em;
 }
-b {
+b, strong {
     color: #123D79;
 }
 a {
