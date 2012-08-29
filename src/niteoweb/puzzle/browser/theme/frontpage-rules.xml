@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <!-- TODO: slogan should probably be somewhere in the content of the front page
+        ... or page title or something similar ... and not hardcoded in rules file -->
+
+    <!-- replace texts in header bar -->
+    <replace css:theme-children="h1#page-title">
+      Web presence,<br/> made easy.
+    </replace>
+    <replace css:theme-children="p#slogan">
+      We put the pieces together.
+    </replace>
+
+    <!-- drop breadcrumbs navigation -->
+    <drop css:theme="#breadcrumbs-navig"/>
+
+    <!-- copy over two columns -->
+    <copy css:content="div#about-us" css:theme="div#left-column"/>
+    <copy css:content="div#services" css:theme="div#right-column"/>
+
+    <!-- XPath to the "What do we do?"  -->
+    <drop content="//*[@id='services']/h2[2]"/>
+
+    <!-- XPath to the empty paragraph  -->
+    <drop content="//*[@id='services']/p[5]"/>
+
+    <replace theme-children="//*[@id='tab_1_a']" content-children="//*[@id='quickinfo']/div[1]/h3"/>
+    <replace theme-children="//*[@id='tab_1_li']/p" content-children="//*[@id='quickinfo']/div[1]/p[1]"/>
+    <replace theme-children="//*[@id='content_1']/p[1]" content-children="//*[@id='quickinfo']/div[1]/p[2]"/>
+    <replace theme-children="//*[@id='content_1']/p[2]" content-children="//*[@id='quickinfo']/div[1]/p[3]"/>
+    <replace theme-children="//*[@id='content_1']/p[3]" content-children="//*[@id='quickinfo']/div[1]/p[4]"/>
+
+    <replace theme-children="//*[@id='tab_2_a']" content-children="//*[@id='quickinfo']/div[2]/h3"/>
+    <replace theme-children="//*[@id='tab_2_li']/p" content-children="//*[@id='quickinfo']/div[2]/p[1]"/>
+    <replace theme-children="//*[@id='content_2']/p[1]" content-children="//*[@id='quickinfo']/div[2]/p[2]"/>
+    <replace theme-children="//*[@id='content_2']/p[2]" content-children="//*[@id='quickinfo']/div[2]/p[3]"/>
+    <drop theme="//*[@id='content_2']/p[3]"/>
+
+    <replace theme-children="//*[@id='tab_3_a']" content-children="//*[@id='quickinfo']/div[3]/h3"/>
+    <replace theme-children="//*[@id='tab_3_li']/p" content-children="//*[@id='quickinfo']/div[3]/p[1]"/>
+    <replace theme-children="//*[@id='content_3']/p[1]" content-children="//*[@id='quickinfo']/div[3]/p[2]"/>
+    <replace theme-children="//*[@id='content_3']/p[2]" content-children="//*[@id='quickinfo']/div[3]/p[3]"/>
+    <drop theme="//*[@id='content_3']/p[3]"/>
+
+</rules>
