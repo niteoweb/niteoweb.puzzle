@@ -4,28 +4,13 @@
     xmlns:css="http://namespaces.plone.org/diazo/css"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-    <!-- change header ID for the one that is used on subpages -->
+    <!-- change header and body BG for the one that is used on subpages -->
+    <drop css:theme="body" attributes="class" />
+    <drop css:theme="#page-title" />
+    <drop css:theme="#slogan" />
 
-    <!-- change id="header-index" with id="header-subpage"
-
-       also remove class "section-front-page" from body tag
-    -->
-
-    <!--<replace css:theme="#header-index" css:content="#header-index" />-->
-
-<!--    <xsl:template match="#header-index">
-      <xsl:attribute name="id">
-        <xsl:value-of select="header-subpage" />
-      </xsl:attribute>
-    </xsl:template>-->
-
-<!--    <replace css:theme-children="h1#page-title">
-      Web presence,<br/> made easy.
-    </replace>
-    <replace css:theme-children="p#slogan">
-      We put the pieces together.
-    </replace>-->
-
+    <!-- change header's ID attribute -->
+    <prepend css:theme="#header-index"><xsl:attribute name="id">header-subpage</xsl:attribute></prepend>
 
     <!-- copy portal breadcrumbs -->
     <replace css:theme-children="#breadcrumbs-navig" css:content-children="#portal-breadcrumbs"/>
