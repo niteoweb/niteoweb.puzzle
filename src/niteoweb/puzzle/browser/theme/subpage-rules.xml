@@ -12,13 +12,16 @@
     <!-- change header's ID attribute -->
     <prepend css:theme="#header-index"><xsl:attribute name="id">header-subpage</xsl:attribute></prepend>
 
+    <drop css:content="h1#parent-fieldname-title" attributes="*" />
+
+    <!-- NOTE: refer to the original header's ID, not to the new one -->
+    <replace css:theme-children="#header-index > div:first-child" css:content="h1#parent-fieldname-title" />
+
     <!-- copy portal breadcrumbs -->
     <replace css:theme-children="#breadcrumbs-navig" css:content-children="#portal-breadcrumbs"/>
 
     <!-- copy all content into theme -->
     <replace css:content-children="#content" css:theme-children="#main-content"/>
-
-    <drop css:content="h1.documentFirstHeading"/>
 
     <replace css:content="#parent-fieldname-description">
       <p>
