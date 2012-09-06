@@ -6,6 +6,7 @@ develop-eggs
 docs/doctrees
 docs/html
 docs/make.bat
+docs/Makefile
 eggs
 etc/haproxy.conf
 etc/nginx.conf
