@@ -47,6 +47,7 @@ setup(
         'Pillow',
         'Plone',
         'plone.app.caching',
+        'plone.app.dexterity',
         'plone.app.theming',
         'setuptools',
         'z3c.jbot',
