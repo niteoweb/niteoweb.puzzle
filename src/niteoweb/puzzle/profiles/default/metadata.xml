@@ -3,5 +3,6 @@
     <dependencies>
         <dependency>profile-plone.app.theming:default</dependency>
         <dependency>profile-Products.ContentWellPortlets:default</dependency>
+        <dependency>profile-collective.portlet.embed:default</dependency>
     </dependencies>
 </metadata>

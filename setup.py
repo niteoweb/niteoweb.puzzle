@@ -40,6 +40,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
+        'collective.portlet.embed',
         'five.grok',
         'five.pt',
         'niteoweb.fabfile',
