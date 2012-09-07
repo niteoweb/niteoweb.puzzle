@@ -51,6 +51,7 @@ setup(
         'plone.app.theming',
         'setuptools',
         'z3c.jbot',
+        'plone.api',
     ],
     extras_require={
         'test': [
