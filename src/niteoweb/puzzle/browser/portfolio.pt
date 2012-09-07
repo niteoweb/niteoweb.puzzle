@@ -1,0 +1,73 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master">
+<body>
+
+  <metal:content-core fill-slot="content-core">
+    <metal:content-core define-macro="content-core">
+
+      <p tal:condition="not: context/@@folderListing">
+        No Project content types added yet, add some!
+      </p>
+
+      <div class="listing" summary="Project list" id="project-summary"
+          tal:condition="context/@@folderListing"
+          tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
+
+          <div tal:define="folders view/folders"
+            tal:repeat="folder folders">
+            <h2 tal:content="folder"/>
+            <dl tal:repeat="project python:folders[folder]"
+              class="collapsible collapsedOnLoad">
+              <dt tal:content="project/Title" class="collapsibleHeader"></dt>
+              <dd class="collapsibleContent">
+
+                <p tal:condition="project/url">
+                  <b>URL</b>:
+                  <a class="external-link"
+                    tal:attributes="href project/url"
+                    tal:content="project/url">
+                  </a>
+                </p>
+
+                <p tal:condition="project/ongoing" class="project-release">
+                  <b>First release in</b>:
+                  <span tal:content="project/first_release/year"/>
+                  (ongoing development)
+                </p>
+                <p tal:condition="not: project/ongoing" class="project-release">
+                  <b>Released in</b>:
+                  <span tal:content="project/first_release/year"/>
+                </p>
+
+                <p tal:condition="project/technologies">
+                  <b>Technologies Used</b>:
+                  <span
+                    tal:content="project/technologies">
+                  </span>
+                </p>
+
+                <p tal:condition="project/description">
+                  <b>Summary</b>:
+                  <span
+                    tal:content="project/description">
+                  </span>
+                </p>
+
+                <div tal:condition="project/body"
+                  tal:replace="structure project/body/output">
+                </div>
+
+              </dd>
+            </dl>
+
+          </div>
+      </div>
+
+      </metal:content-core>
+    </metal:content-core>
+
+</body>
+</html>
