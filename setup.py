@@ -49,6 +49,7 @@ setup(
         'plone.app.caching',
         'plone.app.dexterity',
         'plone.app.theming',
+        'Products.ContentWellPortlets',
         'setuptools',
         'z3c.jbot',
     ],

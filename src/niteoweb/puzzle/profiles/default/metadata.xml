@@ -2,5 +2,6 @@
     <version>0010</version>
     <dependencies>
         <dependency>profile-plone.app.theming:default</dependency>
+        <dependency>profile-Products.ContentWellPortlets:default</dependency>
     </dependencies>
 </metadata>
