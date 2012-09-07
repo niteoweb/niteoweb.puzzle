@@ -52,6 +52,7 @@ setup(
         'Products.ContentWellPortlets',
         'setuptools',
         'z3c.jbot',
+        'plone.api',
     ],
     extras_require={
         'test': [
