@@ -4,5 +4,6 @@
         <dependency>profile-plone.app.theming:default</dependency>
         <dependency>profile-Products.ContentWellPortlets:default</dependency>
         <dependency>profile-collective.portlet.embed:default</dependency>
+        <dependency>profile-plone.app.dexterity:default</dependency>
     </dependencies>
 </metadata>
