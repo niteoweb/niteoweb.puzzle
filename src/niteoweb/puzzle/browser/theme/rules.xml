@@ -22,8 +22,41 @@
     </rules>
 
     <!-- footer rules -->
-    <replace css:theme-children="#FooterPortletA" content-children="//*[@id='footer-wrapper']/div[1]"/>
-    <replace css:theme-children="#FooterPortletB" content-children="//*[@id='footer-wrapper']/div[2]"/>
-    <replace css:theme-children="#FooterPortletC" content-children="//*[@id='footer-wrapper']/div[3]"/>
-    <replace css:theme-children="#FooterPortletD" content-children="//*[@id='footer-wrapper']/div[4]"/>
+
+    <!-- drop unnecessary stuff from footer portlets -->
+    <drop css:content="span.portletTopLeft, span.portletTopRight, span.portletBottomLeft, span.portletBottomRight"/>
+
+
+    <!-- footer portlet A -->
+    <before css:theme-children="#FooterPortletA">
+      <h4><xsl:copy-of select="//*[contains(@class, 'FooterPortletManager1')]/
+              div[contains(@class, 'portletWrapper')]/dl/dt/span/text()"/></h4>
+    </before>
+    <replace
+        css:theme-children="#FooterPortletA"
+        css:content-children="div.FooterPortletManager1 > div.portletWrapper > dl > dd"/>
+
+    <!-- footer portlet B -->
+    <before css:theme-children="#FooterPortletB">
+      <h4><xsl:copy-of select="//*[contains(@class, 'FooterPortletManager2')]/
+              div[contains(@class, 'portletWrapper')]/dl/dt/span/text()"/></h4>
+    </before>
+    <replace
+        css:theme-children="#FooterPortletB"
+        css:content-children="div.FooterPortletManager2 > div.portletWrapper > dl > dd"/>
+
+    <!-- footer portlet C -->
+    <before css:theme-children="#FooterPortletC">
+      <h4><xsl:copy-of select="//*[contains(@class, 'FooterPortletManager3')]/
+              div[contains(@class, 'portletWrapper')]/dl/dt/span/text()"/></h4>
+    </before>
+    <replace
+        css:theme-children="#FooterPortletC"
+        css:content-children="div.FooterPortletManager3 > div.portletWrapper > dl > dd"/>
+
+    <!-- portlet D - no title, copy only content (seal code) -->
+    <replace
+        css:theme-children="#FooterPortletD"
+        css:content-children="div.FooterPortletManager4 > div.portletWrapper > dl > dd"/>
+
 </rules>
