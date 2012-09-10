@@ -592,6 +592,9 @@ dl.portletError dd {
     line-height: 1.3em;
 }
 
+.portletCollection img {
+    display: none;
+}
 
 /* tag-cloud styles*/
 .cloud1 {
