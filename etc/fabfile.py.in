@@ -40,12 +40,12 @@ Available Fabric commands
 """
 
 from fabric.api import env
-from niteoweb.fabfile import configure_nginx
-from niteoweb.fabfile import download_code
-from niteoweb.fabfile import prepare_buildout
-from niteoweb.fabfile import run_buildout
-from niteoweb.fabfile import start_supervisord
-from niteoweb.fabfile import upload_data
+from niteoweb.fabfile.project import configure_nginx
+from niteoweb.fabfile.project import download_code
+from niteoweb.fabfile.project import prepare_buildout
+from niteoweb.fabfile.project import run_buildout
+from niteoweb.fabfile.project import start_supervisord
+from niteoweb.fabfile.project import upload_data
 
 import os
 
