@@ -21,10 +21,12 @@
  <property name="klass">plone.dexterity.content.Item</property>
  <property name="behaviors">
   <element value="plone.app.content.interfaces.INameFromTitle"/>
+  <element value="collective.dexteritytextindexer.behavior.IDexterityTextIndexer"/>
  </property>
  <property name="schema"></property>
  <property
-    name="model_source">&lt;model xmlns="http://namespaces.plone.org/supermodel/schema"&gt;
+    name="model_source">&lt;model xmlns="http://namespaces.plone.org/supermodel/schema"
+                                  xmlns:indexer="http://namespaces.plone.org/supermodel/indexer"&gt;
     &lt;schema&gt;
       &lt;field name="title" type="zope.schema.TextLine"&gt;
         &lt;description&gt;Project Title&lt;/description&gt;
@@ -109,7 +111,7 @@
         &lt;required&gt;False&lt;/required&gt;
         &lt;title&gt;General Description&lt;/title&gt;
       &lt;/field&gt;
-      &lt;field name="body" type="plone.app.textfield.RichText"&gt;
+      &lt;field name="body" type="plone.app.textfield.RichText" indexer:searchable="true"&gt;
         &lt;description /&gt;
         &lt;required&gt;False&lt;/required&gt;
         &lt;title&gt;Detailed Description&lt;/title&gt;
