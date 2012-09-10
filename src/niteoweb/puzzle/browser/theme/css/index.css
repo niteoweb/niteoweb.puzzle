@@ -95,7 +95,7 @@ body {
 
 /* this centers top, header and content sections */
 #main-container {
-    max-width: 960px;
+    width: 960px;
     margin: 0 auto;
 }
 
@@ -111,7 +111,7 @@ body {
     height: 97px;
 }
 
-#breadcrumbs-navig {
+#portal-breadcrumbs {
     margin-top: 0.5em;
     margin-bottom: 1em;
     color: #666666;
@@ -120,6 +120,7 @@ body {
 
 #content {
     margin-top: 10px;
+    max-width: 960px;
 }
 
 /* this allows to have a full-width blue stripe in the background and also footer content centered and fixed width */
