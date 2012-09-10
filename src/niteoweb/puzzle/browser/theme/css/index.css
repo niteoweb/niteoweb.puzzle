@@ -60,13 +60,26 @@ body {
 }
 h1, h2, h3, h4, h5 {
     color: #EF8200;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+h1 {
+    font-size: 2em;
 }
 h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 1.75em;
 }
 h3 {
-    margin-bottom: 10px;
+    font-size: 1.25em;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+    font-size: 0.8em;
 }
 p {
     line-height: 1.5em;
@@ -109,6 +122,10 @@ body {
 
 #header-subpage {
     height: 97px;
+}
+
+#header-index-slogan h1 {
+    line-height: 1em;
 }
 
 #portal-breadcrumbs {
@@ -217,6 +234,13 @@ body.section-front-page {
     margin-bottom: 8px;
 }
 
+#content p,
+#content table,
+#content dl,
+dl.portlet {
+    margin-bottom: 1em;
+}
+
 #content p {
     margin-bottom: 0.5em;
 }
@@ -245,6 +269,15 @@ body.section-front-page {
     display: list-item;
     line-height: 1.5em;
     margin-bottom: 0.25em;
+}
+
+#content dt {
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-right: 0;
+}
+#content dd {
+    margin: 0 0 1em 2em;
 }
 
 #content table {
@@ -341,6 +374,7 @@ table.grid td, table.grid th {
     font-size: 16px;
     padding: 20px 0 0 10px;
     margin-bottom: 0px;
+    line-height: 1em;
 }
 
 #tabs ul {

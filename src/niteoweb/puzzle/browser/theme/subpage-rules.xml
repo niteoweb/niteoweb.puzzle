@@ -4,6 +4,9 @@
     xmlns:css="http://namespaces.plone.org/diazo/css"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+    <!-- this is only used on frontpage -->
+    <drop css:theme="#header-index-slogan" />
+
     <!-- change header and body BG for the one that is used on subpages -->
     <drop css:theme="body" attributes="class" />
     <drop css:theme="#page-title" />
@@ -15,7 +18,7 @@
     <!-- NOTE: refer to the original header's ID, not to the new one -->
     <!-- we use method="raw" here because H1 would otherwise get dropped by
          the second rule which drops it from main content -->
-    <replace css:theme-children="#header-index > div:first-child" css:content="h1#parent-fieldname-title" method="raw"/>
+    <replace css:theme-children="#header-index > div:first-child" css:content=".documentFirstHeading" method="raw"/>
     <drop css:content="#content h1" />
 
     <!-- copy all main content into theme -->
