@@ -40,6 +40,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
+        'collective.dexteritytextindexer',
         'collective.portlet.embed',
         'five.grok',
         'five.pt',
@@ -47,13 +48,13 @@ setup(
         'niteoweb.loginas',
         'Pillow',
         'Plone',
+        'plone.api',
         'plone.app.caching',
         'plone.app.dexterity',
         'plone.app.theming',
         'Products.ContentWellPortlets',
         'setuptools',
         'z3c.jbot',
-        'plone.api',
     ],
     extras_require={
         'test': [
