@@ -506,6 +506,10 @@ position:static;
 
 /* portlets styling */
 
+#portal-column-two {
+   margin-top: 20px;
+}
+
 dl.portlet {
     margin: 0 0 1em;
 }
