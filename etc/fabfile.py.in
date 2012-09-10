@@ -56,6 +56,12 @@ env.prod_user = '${config:shortname}'  # production user for this project
 env.server_ip = '${ips:server}'
 env.hq_ip = '${ips:hq}'
 env.shortname = '${config:shortname}'
+env.python_version = '2.7'
+
+# repo moved to github
+env.svn_url = 'https://github.com/niteoweb'
+env.svn_repo = 'niteoweb.puzzle'
+env.svn_dir = 'trunk'
 
 
 def deploy():
