@@ -21,12 +21,14 @@
     <replace css:theme-children="#breadcrumbs-navig" css:content-children="#portal-breadcrumbs"/>
 
     <!-- copy all content into theme -->
-    <replace css:content-children="#content" css:theme-children="#main-content"/>
+    <replace css:content-children="#content-core" css:theme-children="#main-content"/>
 
     <replace css:content="#parent-fieldname-description">
       <p>
         <strong><xsl:copy-of select="//*[@id='parent-fieldname-description']/text()"/></strong>
       </p>
     </replace>
+
+    <after css:theme-children="#main-content" css:content="#portal-column-two" />
 
 </rules>
