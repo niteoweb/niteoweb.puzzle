@@ -8,9 +8,6 @@
     <!-- reference theme file (static HTML template) -->
     <theme href="index.html" />
 
-    <!-- Remove skype call div -->
-    <drop css:theme="#skype" />
-
     <!-- for frontpage only include rules specific for it -->
     <rules css:if-content="body.section-front-page">
       <xi:include href="frontpage-rules.xml" />
