@@ -21,12 +21,12 @@
  <property name="klass">plone.dexterity.content.Item</property>
  <property name="behaviors">
   <element value="plone.app.content.interfaces.INameFromTitle"/>
-  <element value="collective.dexteritytextindexer.behavior.IDexterityTextIndexer"/>
+  <element
+     value="collective.dexteritytextindexer.behavior.IDexterityTextIndexer"/>
  </property>
  <property name="schema"></property>
  <property
-    name="model_source">&lt;model xmlns="http://namespaces.plone.org/supermodel/schema"
-                                  xmlns:indexer="http://namespaces.plone.org/supermodel/indexer"&gt;
+    name="model_source">&lt;model xmlns="http://namespaces.plone.org/supermodel/schema"&gt;
     &lt;schema&gt;
       &lt;field name="title" type="zope.schema.TextLine"&gt;
         &lt;description&gt;Project Title&lt;/description&gt;
@@ -34,12 +34,12 @@
         &lt;title&gt;Title&lt;/title&gt;
       &lt;/field&gt;
       &lt;field name="url" type="zope.schema.Text"&gt;
-        &lt;description&gt;List of URLs where project is deployed, one per line.&lt;/description&gt;
+        &lt;description&gt;URL where project is deployed.&lt;/description&gt;
         &lt;required&gt;False&lt;/required&gt;
         &lt;title&gt;URL&lt;/title&gt;
       &lt;/field&gt;
-      &lt;field name="first_release" type="zope.schema.Date"&gt;
-        &lt;description&gt;Date when project was first released.&lt;/description&gt;
+      &lt;field name="released" type="zope.schema.Date"&gt;
+        &lt;description&gt;Date when the project was released.&lt;/description&gt;
         &lt;required&gt;False&lt;/required&gt;
         &lt;title&gt;First release&lt;/title&gt;
       &lt;/field&gt;
@@ -111,7 +111,7 @@
         &lt;required&gt;False&lt;/required&gt;
         &lt;title&gt;General Description&lt;/title&gt;
       &lt;/field&gt;
-      &lt;field name="body" type="plone.app.textfield.RichText" indexer:searchable="true"&gt;
+      &lt;field name="body" type="plone.app.textfield.RichText" indexer:searchable="true" xmlns:indexer="http://namespaces.plone.org/supermodel/indexer"&gt;
         &lt;description /&gt;
         &lt;required&gt;False&lt;/required&gt;
         &lt;title&gt;Detailed Description&lt;/title&gt;
