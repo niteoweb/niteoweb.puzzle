@@ -29,10 +29,14 @@ class TestInstall(IntegrationTestCase):
     def test_dependencies_installed(self):
         """Test that all dependencies are installed."""
         installer = api.portal.get_tool('portal_quickinstaller')
-        self.assertTrue(installer.isProductInstalled('plone.app.dexterity'))
+        self.assertTrue(installer.isProductInstalled('collective.disqus'))
         self.assertTrue(installer.isProductInstalled('collective.portlet.embed'))
+        self.assertTrue(installer.isProductInstalled('collective.twitterportlet'))
         self.assertTrue(installer.isProductInstalled('ContentWellPortlets'))
+        self.assertTrue(installer.isProductInstalled('plone.app.dexterity'))
         self.assertTrue(installer.isProductInstalled('plone.app.theming'))
+        self.assertTrue(installer.isProductInstalled('Scrawl'))
+        self.assertTrue(installer.isProductInstalled('qi.portlet.TagClouds'))
 
     # types/Folder.xml
     def test_folder_available_layouts(self):
