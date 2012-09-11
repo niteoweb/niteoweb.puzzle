@@ -86,12 +86,6 @@ class TestInstall(IntegrationTestCase):
 
         self.assertIn('collapsiblesections.js', ids)
 
-    # properties.xml
-    def test_portal_title(self):
-        """Test if portal title was correctly updated."""
-        title = self.portal.getProperty('title')
-        self.assertEquals("Puzzle Site", title)
-
     # browserlayer.xml
     def test_browserlayer(self):
         """Test that INiteowebPuzzleLayer is registered."""
