@@ -7,6 +7,9 @@
     <!-- TODO: slogan should probably be somewhere in the content of the front page
         ... or page title or something similar ... and not hardcoded in rules file -->
 
+    <!-- this is only used on subpages -->
+    <drop css:theme="#header-index-title" />
+
     <!-- replace texts in header bar -->
     <replace css:theme-children="h1#page-title">
       Web presence,<br/> made easy.

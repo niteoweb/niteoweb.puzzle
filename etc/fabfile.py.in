@@ -40,12 +40,12 @@ Available Fabric commands
 """
 
 from fabric.api import env
-from niteoweb.fabfile import configure_nginx
-from niteoweb.fabfile import download_code
-from niteoweb.fabfile import prepare_buildout
-from niteoweb.fabfile import run_buildout
-from niteoweb.fabfile import start_supervisord
-from niteoweb.fabfile import upload_data
+from niteoweb.fabfile.project import configure_nginx
+from niteoweb.fabfile.project import download_code
+from niteoweb.fabfile.project import prepare_buildout
+from niteoweb.fabfile.project import run_buildout
+from niteoweb.fabfile.project import start_supervisord
+from niteoweb.fabfile.project import upload_data
 
 import os
 
@@ -56,6 +56,12 @@ env.prod_user = '${config:shortname}'  # production user for this project
 env.server_ip = '${ips:server}'
 env.hq_ip = '${ips:hq}'
 env.shortname = '${config:shortname}'
+env.python_version = '2.7'
+
+# repo moved to github
+env.svn_url = 'https://github.com/niteoweb'
+env.svn_repo = 'niteoweb.puzzle'
+env.svn_dir = 'trunk'
 
 
 def deploy():

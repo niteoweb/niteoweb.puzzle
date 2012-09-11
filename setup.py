@@ -41,7 +41,9 @@ setup(
     zip_safe=False,
     install_requires=[
         'collective.dexteritytextindexer',
+        'collective.disqus',
         'collective.portlet.embed',
+        'collective.twitterportlet',
         'five.grok',
         'five.pt',
         'niteoweb.fabfile',
@@ -53,6 +55,8 @@ setup(
         'plone.app.dexterity',
         'plone.app.theming',
         'Products.ContentWellPortlets',
+        'Products.Scrawl',
+        'qi.portlet.TagClouds',
         'setuptools',
         'z3c.jbot',
     ],
