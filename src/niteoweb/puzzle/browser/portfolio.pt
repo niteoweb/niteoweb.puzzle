@@ -12,7 +12,7 @@
         No Project content types added yet, add some!
       </p>
 
-      <div class="listing" summary="Project list" id="project-summary"
+      <div class="listing" id="project-summary"
           tal:condition="context/@@folderListing"
           tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
 
@@ -32,14 +32,10 @@
                   </a>
                 </p>
 
-                <p tal:condition="project/ongoing" class="project-release">
+                <p tal:condition="project/released" class="project-release">
                   <b>First release in</b>:
-                  <span tal:content="project/first_release/year"/>
-                  (ongoing development)
-                </p>
-                <p tal:condition="not: project/ongoing" class="project-release">
-                  <b>Released in</b>:
-                  <span tal:content="project/first_release/year"/>
+                  <span tal:content="project/released/year"/>
+                  <span tal:condition="project/ongoing"> (ongoing development)</span>
                 </p>
 
                 <p tal:condition="project/technologies">

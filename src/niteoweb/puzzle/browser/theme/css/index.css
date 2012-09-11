@@ -158,8 +158,9 @@ body {
 }
 
 /* ----------- Top styling ----------- */
-#skype img {
-    float: right;
+#top-links {
+     text-align: right;
+     margin-top: 5px;
 }
 
 /* ----------- Header styling ----------- */
