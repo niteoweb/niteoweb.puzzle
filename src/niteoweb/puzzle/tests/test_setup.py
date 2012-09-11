@@ -93,6 +93,15 @@ class TestInstall(IntegrationTestCase):
         from plone.browserlayer import utils
         self.failUnless(INiteowebPuzzleLayer in utils.registered_layers())
 
+    def test_doctype_configured(self):
+        """Test that we use the HTML5 doctype."""
+        from plone.app.theming.interfaces import IThemeSettings
+        from plone.registry.interfaces import IRegistry
+        from zope.component import getUtility
+
+        settings = getUtility(IRegistry).forInterface(IThemeSettings)
+        self.assertEqual(settings.doctype, '<!doctype html>')
+
 
 def test_suite():
     """This sets up a test suite that actually runs the tests in the class
