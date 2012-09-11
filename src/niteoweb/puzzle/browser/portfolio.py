@@ -21,6 +21,8 @@ class Portfolio(grok.View):
     def folders(self):
         folders = OrderedDict()
         for name, item in self.context.items():
+            if not item.portal_type == "Folder":
+                continue
             projects = []
             for subname, subitem in item.items():
                 if subitem.portal_type == "project":
