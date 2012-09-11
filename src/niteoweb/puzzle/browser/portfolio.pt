@@ -12,7 +12,7 @@
         No Project content types added yet, add some!
       </p>
 
-      <div class="listing" summary="Project list" id="project-summary"
+      <div class="listing" id="project-summary"
           tal:condition="context/@@folderListing"
           tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
 
