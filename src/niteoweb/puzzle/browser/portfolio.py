@@ -27,5 +27,5 @@ class Portfolio(grok.View):
             for subname, subitem in item.items():
                 if subitem.portal_type == "project":
                     projects += [subitem]
-            folders[item.Title] = projects
+            folders[item.Title()] = projects
         return folders
