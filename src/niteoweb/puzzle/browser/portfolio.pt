@@ -45,7 +45,7 @@
                 <p tal:condition="project/technologies">
                   <b>Technologies Used</b>:
                   <span
-                    tal:content="project/technologies">
+                    tal:content="python: ', '.join(project.technologies)">
                   </span>
                 </p>
 
