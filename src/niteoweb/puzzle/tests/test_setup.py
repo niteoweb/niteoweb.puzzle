@@ -58,7 +58,7 @@ class TestInstall(IntegrationTestCase):
 
     # types/project.xml
     def test_project_installed(self):
-        """Test that Todo Item content type is listed in portal_types."""
+        """Test that Project content type is listed in portal_types."""
         types = api.portal.get_tool('portal_types')
         self.assertIn('project', types.objectIds())
 
