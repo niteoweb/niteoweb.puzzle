@@ -1,0 +1,8 @@
+1. Install Cassandra on your system: http://java.dzone.com/articles/installing-apache-cassandra
+2. Run buildout to get all python dependencies
+3. Start Zope and go to http://localhost:8080/Plone/prefs_install_products_form and install collective.atcassandrastorage. 
+4. Go to http://localhost:8080/Plone/portal_registry and configure the following fields:
+    - connection_timeout
+    - username
+    - password
+    - servers
