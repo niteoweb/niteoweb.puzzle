@@ -59,6 +59,7 @@ setup(
         'qi.portlet.TagClouds',
         'setuptools',
         'z3c.jbot',
+        'RelStorage',
     ],
     extras_require={
         'test': [
