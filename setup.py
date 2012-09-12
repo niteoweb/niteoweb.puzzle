@@ -60,6 +60,7 @@ setup(
         'setuptools',
         'z3c.jbot',
         'pycassa',
+        'thrift',
         'collective.atcassandrastorage',
     ],
     extras_require={

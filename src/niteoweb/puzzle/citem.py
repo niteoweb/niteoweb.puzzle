@@ -16,8 +16,8 @@ from niteoweb.puzzle.config import PROJECTNAME
 CitemSchema = ATFolderSchema.copy() + atapi.Schema((
     atapi.StringField(
         'cfield',
-        storage=atapi.AnnotationStorage(),
-        #storage=CassandraFieldStorage("AKeyspace", "AColumnFamily"),
+        #storage=atapi.AnnotationStorage(),
+        storage=CassandraFieldStorage("MyKeyspace", "MyColumnFamily"),
         widget=atapi.StringWidget(
             label=u'This field gets stored in Cassandra',
         ),
