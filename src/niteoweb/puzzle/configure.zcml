@@ -28,4 +28,16 @@
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
 
+    <!-- A content type with Cassandra storage -->
+    <class class=".citem.Citem">
+        <require
+            permission="zope2.View"
+            interface=".interfaces.ICitem"
+        />
+    </class>
+    <permission
+        id="niteoweb.puzzle.AddCitem"
+        title="niteoweb.puzzle: Add Citem"
+    />
+
 </configure>

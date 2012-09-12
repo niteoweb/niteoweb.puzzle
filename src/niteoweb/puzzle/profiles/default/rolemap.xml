@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<rolemap>
+    <permissions>
+
+        <!-- Add permissions for custom content types -->
+        <permission name="niteoweb.puzzle: Add Citem" acquire="False">
+            <role name="Manager" />
+            <role name="Contributor" />
+        </permission>
+
+    </permissions>
+</rolemap>
