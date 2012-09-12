@@ -59,6 +59,8 @@ setup(
         'qi.portlet.TagClouds',
         'setuptools',
         'z3c.jbot',
+        'pycassa',
+        'collective.atcassandrastorage',
     ],
     extras_require={
         'test': [
