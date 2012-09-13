@@ -3,7 +3,6 @@
 
 from niteoweb.puzzle.tests.base import IntegrationTestCase
 from plone import api
-import json
 from DateTime import DateTime
 from plone.app.textfield.value import RichTextValue
 
