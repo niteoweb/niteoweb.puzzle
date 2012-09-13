@@ -29,10 +29,14 @@ class TestInstall(IntegrationTestCase):
     def test_dependencies_installed(self):
         """Test that all dependencies are installed."""
         installer = api.portal.get_tool('portal_quickinstaller')
-        self.assertTrue(installer.isProductInstalled('plone.app.dexterity'))
+        self.assertTrue(installer.isProductInstalled('collective.disqus'))
         self.assertTrue(installer.isProductInstalled('collective.portlet.embed'))
+        self.assertTrue(installer.isProductInstalled('collective.twitterportlet'))
         self.assertTrue(installer.isProductInstalled('ContentWellPortlets'))
+        self.assertTrue(installer.isProductInstalled('plone.app.dexterity'))
         self.assertTrue(installer.isProductInstalled('plone.app.theming'))
+        self.assertTrue(installer.isProductInstalled('Scrawl'))
+        self.assertTrue(installer.isProductInstalled('qi.portlet.TagClouds'))
 
     # types/Folder.xml
     def test_folder_available_layouts(self):
@@ -54,7 +58,7 @@ class TestInstall(IntegrationTestCase):
 
     # types/project.xml
     def test_project_installed(self):
-        """Test that Todo Item content type is listed in portal_types."""
+        """Test that Project content type is listed in portal_types."""
         types = api.portal.get_tool('portal_types')
         self.assertIn('project', types.objectIds())
 
@@ -82,18 +86,21 @@ class TestInstall(IntegrationTestCase):
 
         self.assertIn('collapsiblesections.js', ids)
 
-    # properties.xml
-    def test_portal_title(self):
-        """Test if portal title was correctly updated."""
-        title = self.portal.getProperty('title')
-        self.assertEquals("Puzzle Site", title)
-
     # browserlayer.xml
     def test_browserlayer(self):
         """Test that INiteowebPuzzleLayer is registered."""
         from niteoweb.puzzle.interfaces import INiteowebPuzzleLayer
         from plone.browserlayer import utils
         self.failUnless(INiteowebPuzzleLayer in utils.registered_layers())
+
+    def test_doctype_configured(self):
+        """Test that we use the HTML5 doctype."""
+        from plone.app.theming.interfaces import IThemeSettings
+        from plone.registry.interfaces import IRegistry
+        from zope.component import getUtility
+
+        settings = getUtility(IRegistry).forInterface(IThemeSettings)
+        self.assertEqual(settings.doctype, '<!doctype html>')
 
 
 def test_suite():

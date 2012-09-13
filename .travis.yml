@@ -15,3 +15,9 @@ notifications:
     - "irc.freenode.org#niteoweb"
   email:
     - maintenance@niteoweb.com
+
+# blacklist branches
+branches:
+  except:
+    - cassandra
+    - relstorage
