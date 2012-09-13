@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """Base module for unittesting."""
 
+from plone import api
 from plone.app.testing import applyProfile
 from plone.app.testing import FunctionalTesting
 from plone.app.testing import IntegrationTesting
@@ -34,12 +35,11 @@ class NiteowebPuzzleLayer(PloneSandboxLayer):
         # Login and create some test
         setRoles(portal, TEST_USER_ID, ['Manager'])
         login(portal, TEST_USER_NAME)
-        portal.invokeFactory('Folder', 'folder')
-
-        # Commit so that the test browser sees these objects
-        portal.portal_catalog.clearFindAndRebuild()
-        import transaction
-        transaction.commit()
+        api.content.create(
+            container=portal,
+            type='Folder',
+            id='folder',
+        )
 
     def tearDownZope(self, app):
         """Tear down Zope."""
