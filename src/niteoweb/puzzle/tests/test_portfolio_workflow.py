@@ -53,10 +53,7 @@ class TestWorkflowServices(IntegrationTestCase):
         try:
             api.content.transition(self.project, transition='foobar')
         except api.exc.InvalidParameterError as e:
-            self.assertEqual(
-                str(e),
-                "Invalid transition 'foobar'. \nValid transitions are:\npublish"
-            )
+            self.assertIn("Invalid transition 'foobar'", str(e))
 
 
 def test_suite():
