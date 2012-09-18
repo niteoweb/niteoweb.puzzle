@@ -91,6 +91,7 @@ class TestInstall(IntegrationTestCase):
         from plone.browserlayer import utils
         self.failUnless(INiteowebPuzzleLayer in utils.registered_layers())
 
+    # manifest.cfg
     def test_doctype_configured(self):
         """Test that we use the HTML5 doctype."""
         from plone.app.theming.interfaces import IThemeSettings
