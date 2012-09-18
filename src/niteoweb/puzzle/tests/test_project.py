@@ -13,7 +13,7 @@ class TestRequests(IntegrationTestCase):
     def setUp(self):
         """Custom shared utility setup for tests."""
         self.portal = self.layer['portal']
-        self.folder = self.portal.folder                  # root/home?
+        self.folder = self.portal.folder
 
     def test_add_project(self):
         """Test that we can add a Project."""
