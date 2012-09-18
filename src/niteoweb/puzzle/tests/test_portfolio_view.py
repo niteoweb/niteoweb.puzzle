@@ -45,18 +45,18 @@ class TestView(IntegrationTestCase):
         )
 
         released_date = DateTime('2012/01/10')
-        project_body = RichTextValue(u"Wonderful project in Plone powered by eggs")
+        project_body = RichTextValue(u"Über Plone project with eggs.")
 
         # create a project
         api.content.create(
             container=self.subfolder,
             type="project",
-            title=u"Try Brulé!",
+            title=u"Über project!",
             url=u"http://www.abc.xyz",
             released=released_date,
             ongoing=True,
             technologies=[u"Python", u"Plone"],
-            description=u"Wonderful project in Plone",
+            description=u"Über Plone project.",
             body=project_body,
         )
 
@@ -71,8 +71,13 @@ class TestView(IntegrationTestCase):
 
         # check for content
         self.assertIn('collapsedOnLoad', output)
-        self.assertIn('collapsibleHeader', output)
-        self.assertIn('collapsibleContent', output)
+        self.assertIn(u'class="collapsibleHeader">\xdcber project!</dt>', output)
+        self.assertIn('http://www.abc.xyz', output)
+        self.assertIn('<span>2012</span>', output)
+        self.assertIn('<span> (ongoing development)</span>', output)
+        self.assertIn('<span>Python, Plone</span>', output)
+        self.assertIn(u'<span>\xdcber Plone project.</span>', output)
+        self.assertIn(u'\xdcber Plone project with eggs.', output)
 
 
 def test_suite():
