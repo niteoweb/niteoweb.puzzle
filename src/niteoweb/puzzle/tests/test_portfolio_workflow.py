@@ -43,17 +43,22 @@ class TestWorkflowServices(IntegrationTestCase):
             body=project_body,
         )
 
-    def test_project_workflow(self):
-        api.content.transition(self.project, transition='publish')
-        self.assertEqual(api.content.get_state(self.project), 'published')
-        api.content.transition(self.project, transition='hide')
+    def test_initial_state(self):
+        """Test the initial state of project workflow."""
         self.assertEqual(api.content.get_state(self.project), 'private')
 
-    def test_nonexistant_workflow(self):
-        try:
-            api.content.transition(self.project, transition='foobar')
-        except api.exc.InvalidParameterError as e:
-            self.assertIn("Invalid transition 'foobar'", str(e))
+    def test_publish(self):
+        """Test publishing a project."""
+        api.content.transition(self.project, transition='publish')
+        self.assertEqual(api.content.get_state(self.project), 'published')
+
+    def test_hide(self):
+        """Test hiding a project."""
+        # project needs to be published first, before it can be hidden
+        api.content.transition(self.project, transition='publish')
+
+        api.content.transition(self.project, transition='hide')
+        self.assertEqual(api.content.get_state(self.project), 'private')
 
 
 def test_suite():
