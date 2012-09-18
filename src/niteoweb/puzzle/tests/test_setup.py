@@ -64,14 +64,12 @@ class TestInstall(IntegrationTestCase):
 
     # workflows/project_workflow/definition.xml
     def test_project_workflow_installed(self):
-        """"Test that project_workflow is listed in portal_workflow."""
+        """"Test that project_workflow is listed in portal_workflow and mapped
+        to the project content-type."""
         workflow = api.portal.get_tool('portal_workflow')
+
         self.assertIn('project_workflow', workflow.objectIds())
 
-    # workflows.xml
-    def test_project_workflow(self):
-        """Test if project is present and mapped to Portfolio content type."""
-        workflow = api.portal.get_tool('portal_workflow')
         for portal_type, chain in workflow.listChainOverrides():
             if portal_type in ('project', ):
                 self.assertEquals(('project_workflow',), chain)
