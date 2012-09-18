@@ -20,32 +20,32 @@ class TestRequests(IntegrationTestCase):
         api.content.create(
             container=self.folder,
             type="project",
-            title=u"Try Brulé!",
+            title=u"Über gig",
             url=u"http://www.abc.xyz",
             released=u"30/September/2012",
             ongoing=True,
             technologies=[u"Python", u"Plone"],
-            description=u"Wonderful project in Plone",
-            body=u"Wonderful project in Plone powered by eggs",
+            description=u"Über consulting gig in Plone",
+            body=u"Über consulting gig in Plone powered by eggs.",
         )
-        self.assertEquals(self.folder['try-brule'].title, u'Try Brulé!')
-        self.assertEquals(self.folder['try-brule'].url, u'http://www.abc.xyz')
+        self.assertEquals(self.folder['uber-gig'].title, u'Über gig')
+        self.assertEquals(self.folder['uber-gig'].url, u'http://www.abc.xyz')
         self.assertEquals(
-            self.folder['try-brule'].released,
+            self.folder['uber-gig'].released,
             u'30/September/2012'
         )
-        self.assertEquals(self.folder['try-brule'].ongoing, True)
+        self.assertEquals(self.folder['uber-gig'].ongoing, True)
         self.assertEquals(
-            self.folder['try-brule'].technologies,
+            self.folder['uber-gig'].technologies,
             [u'Python', u'Plone']
         )
         self.assertEquals(
-            self.folder['try-brule'].description,
-            u'Wonderful project in Plone'
+            self.folder['uber-gig'].description,
+            u'Über consulting gig in Plone'
         )
         self.assertEquals(
-            self.folder['try-brule'].body,
-            u'Wonderful project in Plone powered by eggs'
+            self.folder['uber-gig'].body,
+            u'Über consulting gig in Plone powered by eggs.'
         )
 
 
