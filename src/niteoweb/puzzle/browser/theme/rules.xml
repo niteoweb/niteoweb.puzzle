@@ -63,4 +63,8 @@
         css:theme-children="#FooterPortletD"
         css:content-children="div.FooterPortletManager4 > div.portletWrapper > dl > dd"/>
 
+    <!-- pull in scripts that are to be inserted near the end of the body tag -->
+    <after theme-children="/html/body"
+           css:content="#end-of-body-scripts" />
+
 </rules>
