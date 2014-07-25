@@ -25,7 +25,6 @@ bin/zopepy setup.py flakes; handle_exit
 echo '====== Running pep8 =========='
 bin/pep8 --ignore=E501 --count src/niteoweb/puzzle; handle_exit
 bin/pep8 --ignore=E501 --count setup.py; handle_exit
-bin/pep8 --ignore=E501 --count fabfile.py; handle_exit
 
 if [ $EXITCODE -ne 0 ]; then
     exit 1

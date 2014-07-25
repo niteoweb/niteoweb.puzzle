@@ -46,7 +46,6 @@ setup(
         'collective.twitterportlet',
         'five.grok',
         'five.pt',
-        'niteoweb.fabfile',
         'niteoweb.loginas',
         'Pillow',
         'Plone',
@@ -57,7 +56,6 @@ setup(
         'Products.ContentWellPortlets',
         'Products.Scrawl',
         'qi.portlet.TagClouds',
-        'setuptools',
         'z3c.jbot',
     ],
     extras_require={
