@@ -50,7 +50,6 @@ setup(
         'collective.twitterportlet',
         'five.grok',
         'five.pt',
-        'niteoweb.loginas',
         'plone.api',
         'plone.app.caching',
         'plone.app.dexterity',
@@ -77,6 +76,7 @@ setup(
             'setuptools-flakes',
             'zest.releaser',
             'zptlint',
+            'niteoweb.loginas',
         ],
     },
     entry_points="""
